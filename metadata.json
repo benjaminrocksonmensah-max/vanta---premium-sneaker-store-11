@@ -1,0 +1,6 @@
+{
+  "name": "VANTA - Premium Sneaker Store",
+  "description": "Luxury and high-performance sneaker brand and marketplace with curated drops, authentic footwear, and contemporary street culture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

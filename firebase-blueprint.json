@@ -1,0 +1,36 @@
+{
+  "$schema": "https://firebase.google.com/docs/firestore/blueprint-schema.json",
+  "entities": {
+    "users": {
+      "type": "collection",
+      "description": "User profiles with personalized preferences, addresses and security role",
+      "fields": {
+        "uid": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["customer", "admin"] },
+        "avatar": { "type": "string" },
+        "addresses": { "type": "array" },
+        "savedPaymentMethods": { "type": "array" },
+        "preferences": { "type": "object" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "orders": {
+      "type": "collection",
+      "description": "Customer orders with items, tracking and status",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "subtotal": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "shippingAddress": { "type": "object" }
+      }
+    }
+  }
+}
